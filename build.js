@@ -266,7 +266,8 @@ const tagsIndex = `
 write("tags/index.html", layout({ title: `标签 · ${cfg.title}`, desc: "按标签浏览", body: tagsIndex }));
 Object.entries(allTags).forEach(([t, ps]) => {
   const body = `<section class="post-list"><h1 class="page-title">标签:${esc(t)} <small>${ps.length} 篇</small></h1>${ps.map(postCard).join("")}</section>`;
-  write(`tags/${encodeURIComponent(t)}/index.html`, layout({ title: `标签:${t} · ${cfg.title}`, desc: `标签 ${t} 下的文章`, body }));
+  // 目录用原始标签名(UTF-8 文件名);链接处仍用 encodeURIComponent,服务器解码后正好匹配
+  write(`tags/${t}/index.html`, layout({ title: `标签:${t} · ${cfg.title}`, desc: `标签 ${t} 下的文章`, body }));
 });
 
 /* 独立页面 (pages/*.md) */
