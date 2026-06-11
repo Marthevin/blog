@@ -2,7 +2,7 @@
   "title": "铜与墨",
   "subtitle": "AI × 硬件 × 内容",
   "description": "记录 AI、嵌入式硬件与内容创作交叉地带的思考与实践。",
-  "url": "https://marthevin.github.io/blog",
+  "url": "https://marthevin.github.io",
   "author": "Alhata",
   "lang": "zh-CN",
   "postsPerPage": 8,
@@ -18,7 +18,7 @@
   ],
   "giscus": {
     "enabled": false,
-    "repo": "Marthevin/blog",
+    "repo": "Marthevin/marthevin.github.io",
     "repoId": "",
     "category": "Announcements",
     "categoryId": ""
